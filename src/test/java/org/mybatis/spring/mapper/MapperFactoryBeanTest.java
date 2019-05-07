@@ -69,7 +69,8 @@ class MapperFactoryBeanTest extends AbstractMyBatisSpringTest {
     SqlSessionFactory sqlSessionFactory = factoryBean.getObject();
 
     find(new SqlSessionTemplate(sqlSessionFactory), true);
-    assertCommit(); // SqlSesssionTemplate autocommits
+    assertCommit(); 
+    System.out.println("123123131");
     assertSingleConnection();
     assertExecuteCount(1);
   }
